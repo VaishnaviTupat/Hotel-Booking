@@ -1,0 +1,187 @@
+.booking-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  border-radius: 10px;
+  padding:10px;
+}
+
+/* BOTH CARDS SAME SIZE */
+
+.booking-card{
+  width:420px;
+  background:white;
+  padding:20px;
+  height: 430px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+.payment-card{
+  width:400px;
+  background:white;
+  padding:20px;
+  height: 500px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+.payment-card p{
+  margin: 4px 0;
+}
+
+/* TITLES */
+
+.booking-card h2,
+.payment-card h2{
+  text-align:center;
+   margin-bottom:10px;
+}
+
+/* FORM INPUTS */
+
+.booking-card input,
+.booking-card select{
+  width:90%;
+  padding:10px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+/* DATE ROW */
+
+.date-row{
+  display:flex;
+  gap:10px;
+}
+
+/* CONFIRM BUTTON */
+
+.confirm-btn{
+  width:100%;
+  padding:12px;
+  background:gold !important;
+  color:rgb(24, 23, 23);
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.confirm-btn:hover{
+  background:#0f6ad6;
+}
+
+/* PAYMENT DETAILS */
+
+.payment-info p{
+  margin: 0;
+}
+
+/* COUPON */
+
+.coupon-box{
+  display:flex;
+  gap:10px;
+  margin:15px 0;
+}
+
+.coupon-box input{
+  flex:1;
+  padding:8px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.coupon-box button{
+  padding:8px 15px;
+  background:rgb(50, 194, 6);
+  color:rgb(19, 18, 18);
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* AMOUNT */
+
+.discount{
+  color:rgb(13, 12, 12);
+  margin:8px 0;
+}
+
+.final{
+  font-size:18px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+/* PAYMENT METHOD */
+.payment{
+   gap:30px;
+}
+
+/*Discount*/
+.discount{
+  color: red;
+  font-size: 14px;
+}
+.details{
+  font-size: 14px;
+}
+
+/*Email*/
+.email-toggle-row{
+display:flex;
+align-items:center;
+gap:100px;
+}
+
+.email-toggle-row p{
+margin:0;
+}
+
+.toggle-email-btn{
+background: none !important;
+border: none !important;
+outline: none !important;
+box-shadow: none !important;
+color:#007bff;
+cursor:pointer;
+font-size:14px;
+padding:0;
+text-decoration:underline;
+}
+
+.toggle-email-btn:hover{
+color:#0056b3;
+}
+
+.email-input input{
+width:90%;
+padding:8px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.payment-options{
+display:flex;
+flex-direction:column;
+gap:6px;
+margin-top:10px;
+}
+
+.payment-btn{
+width:100%;
+padding:7px;
+border:1px solid #3b82f6 !important;
+background:white;
+color:#3b82f6;
+border-radius:6px;
+font-size:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.payment-btn:hover{
+background:#3b82f6;
+color:white;
+}

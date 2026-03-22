@@ -1,0 +1,106 @@
+
+/* PAGE WRAPPER */
+.rules-page {
+  min-height: calc(100vh - 64px);
+  margin-top: 2px;
+  background: linear-gradient(135deg, #f4f6f9, #e9ecef);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+/* MAIN CARD */
+.rules-container {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 40px 45px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* HEADINGS */
+.rules-container h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1c1c1c;
+}
+
+.rules-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* RULES LIST */
+.rules-list {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.rules-list li {
+  font-size: 15px;
+  color: #333;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  line-height: 1.5;
+  transition: 0.3s ease;
+}
+
+.rules-list li:hover {
+  background: #fff6db;
+  transform: translateX(4px);
+}
+
+.rules-list strong {
+  color: #000;
+}
+
+/* FOOTER TEXT */
+.rules-footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* AGREE BUTTON */
+.agree-btn {
+  display: block;
+  margin: 25px auto 0;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f5c542, #d4af37);
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.agree-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .rules-container {
+    padding: 30px 25px;
+  }
+
+  .rules-container h2 {
+    font-size: 26px;
+  }
+
+  .rules-list li {
+    font-size: 14px;
+  }
+}

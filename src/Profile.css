@@ -1,0 +1,185 @@
+/* PAGE BACKGROUND */
+
+.profile-page{
+  max-width:1100px;
+  margin:auto;
+  padding-top:120px;
+  padding-bottom:60px;
+  font-family: "Poppins", sans-serif;
+  background:#f8fafc;
+}
+
+
+/* PROFILE CARD */
+
+.profile-card{
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  margin-bottom:40px;
+}
+
+.profile-card img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+}
+
+.profile-card h2{
+  margin:0;
+  font-size:20px;
+}
+
+.profile-card p{
+  margin:2px 0;
+  color:#666;
+  font-size:14px;
+}
+
+
+/* BOOKING GRID */
+
+.booking-section{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:20px;
+  align-items:start; /* IMPORTANT → prevents equal card height */
+}
+
+.booking-section h2{
+  grid-column:1/-1; /* heading full width */
+  margin-bottom:10px;
+  font-size:24px;
+}
+
+
+/* BOOKING CARD */
+
+.booking-card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #eee;
+  transition:0.25s;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.booking-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.08);
+}
+
+
+/* BOOKING HEADER */
+
+.booking-header{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.booking-header h3{
+  margin:0;
+  font-size:18px;
+}
+
+
+/* STATUS BADGE */
+
+.status-badge{
+  padding:4px 10px;
+  font-size:12px;
+  border-radius:20px;
+  font-weight:600;
+}
+
+.status-badge.Confirmed{
+  background:#e6f9ed;
+  color:#1a9c4d;
+}
+
+.status-badge.Cancelled{
+  background:#ffeaea;
+  color:#d63031;
+}
+
+
+/* BOOKING DETAILS */
+
+.booking-details{
+  margin-top:12px;
+  padding:12px;
+  background:#f4f6f9;
+  border-radius:8px;
+  font-size:14px;
+  width:100%;
+}
+
+.booking-details p{
+  margin:4px 0;
+}
+
+
+/* BUTTON GROUP */
+
+.details-btn,
+.cancel-btn{
+  margin-top:10px;
+}
+
+
+/* VIEW DETAILS BUTTON */
+
+.details-btn{
+  padding:8px 16px;
+  border:none;
+  background:#1f2937;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+  transition:0.3s;
+}
+
+.details-btn:hover{
+  background:#111827;
+}
+
+
+/* CANCEL BOOKING BUTTON */
+
+.cancel-btn{
+  padding:8px 16px;
+  border:none;
+  background:#7f1d1d;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+  transition:0.3s;
+}
+
+.cancel-btn:hover{
+  background:#450a0a;
+}
+
+
+/* NO BOOKING */
+
+.no-booking{
+  grid-column:1/-1;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  border:1px solid #eee;
+  color:#777;
+}

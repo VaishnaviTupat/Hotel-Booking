@@ -1,0 +1,72 @@
+/* NAVBAR CONTAINER  */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 98%;
+  border-radius: 20px;
+  height: 64px;                 /* Navbar height */
+  padding: 0 10px;              /* Left–right spacing */
+  display: flex;
+  align-items: center;
+  background: #1c1c1c;          /* Dark background */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+/*  LOGO SECTION */ 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;                    /* Space between logo image & text */
+  color: #f5c542;               /* Gold brand color */
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Logo image size */
+.logo-img {
+  width: 30px;
+  height: 30px;
+}
+
+/* LINKS CONTAINER */
+.nav-link {
+  font-size: 14px;
+  padding: 8px 10px;
+  color: white !important;      /* force white text */
+  margin-left: 5px;
+}
+.navbar .nav-link {
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #140c0c;          /* default text color */
+  text-decoration: none;  /* remove underline */
+  padding: 10px 14px;      /*hover yellow box size*/
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  background: #f5c542;    /* gold background */
+  color: white; /* 🔒 force black text */
+  text-decoration: none;
+}
+
+.nav-link::after {
+  display: none;
+}
+
+.page-content {
+  padding-top: 65px;            /* Space below fixed navbar */
+}
+
+.nav-link svg{
+  font-size: 16px;
+}
+
+/* Active navbar link (current page) */
+.nav-link.active {
+  background: #f5c542;   /* same gold color as hover */
+  color: white;
+}

@@ -1,0 +1,116 @@
+/* HERO SECTION */
+.hero-section {
+  min-height: calc(100vh - 64px); /* full screen minus navbar */
+  margin-top: 2px;               /* navbar height */
+  background: url("image/Hotel2.jpg") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HERO OVERLAY */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 100px;
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(53, 11, 11);
+}
+
+.hero-overlay h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero-overlay p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+/* HERO BUTTON */
+.hero-btn {
+  padding: 15px 30px;
+  background-color: gold !important;
+  color:black !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #021f33;
+}
+
+/* FEATURES SECTION */
+.features-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background: #f4f6f8;
+  text-align: center;
+}
+
+.feature-card {
+  display: grid;
+  background: white;
+  padding: 30px 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: #0d0f10;
+}
+
+.feature-card p {
+  font-size: 15px;
+}
+
+/* BOOKING CTA */
+.booking-cta {
+  background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945")no-repeat center / cover;
+  width: 80%;
+  max-width: 800px;
+  min-height: 40vh;
+  padding: 40px 20px;
+  margin: 30px auto;      /* ✅ add spacing so scroll continues */
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;       /* safe */
+  border-radius: 12px;
+}
+
+.booking-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+
+.booking-cta h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.booking-cta .hero-btn {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+}

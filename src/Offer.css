@@ -1,0 +1,118 @@
+.offers-page {
+  padding: 15px 6%;
+  background: linear-gradient(to left, #fdfbfb, #ebedee);
+  height: 100vh;
+  overflow: hidden;   /* 🔴 disables scrolling */
+}
+
+.offers-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 32px;
+
+  color: #222;
+}
+
+/* Container */
+.offers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  height: calc(100vh - 160px); /* adjust based on navbar + title */
+  align-content: start;
+}
+
+
+/* Card */
+.offer-card {
+  background: #ffffff;
+  width: 300px;
+  padding: 25px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Discount Badge */
+.offer-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #240202;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Text */
+.offer-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.offer-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Code */
+.offer-code {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.offer-code span {
+  background: #f1f1f1;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #070432;
+}
+
+/* Validity */
+.validity {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.offer-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f5c542, #d4af37); /* Premium gold */
+  color: #000;              /* black text */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.offer-btn:hover {
+  background: linear-gradient(135deg, #ffd700, #c9a227);
+  transform: translateY(-2px);
+}
+
+/* Active click */
+.offer-btn:active {
+  transform: scale(0.97);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .offers-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}

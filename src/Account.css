@@ -1,0 +1,59 @@
+/* Wrapper */
+.account-wrapper {
+  position: relative;
+  display: inline-block;  
+  margin-left: auto;   /* 🔥 pushes it to right */
+}
+
+/* Account button = normal navbar text */
+.account-btn {
+  background: transparent !important;  /* 🔥 removes white */
+  border: none !important;
+  color: #ffffff;                      /* navbar text color */
+  font-size: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  box-shadow: none !important;
+}
+
+/* Hover effect (same as other nav links) */
+/* Prevent black/dark hover on Account */
+.account-btn:hover {
+  background: transparent !important;   /* 🔥 stop black bg */
+  color: white;            /* gold hover text */
+}
+
+/* Remove focus outline */
+.account-btn:focus {
+  outline: none;
+}
+
+/* Dropdown box */
+.account-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: black;
+  border-radius: 8px;
+  width: 150px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+/* Dropdown items */
+.account-dropdown button {
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  text-align: left;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.account-dropdown button:hover {
+  background: #f5c542;
+  color: #fcf9f9;
+}
