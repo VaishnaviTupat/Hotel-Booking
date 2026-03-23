@@ -10,7 +10,7 @@
   display:grid;
   grid-template-columns:repeat(4,1fr); /* 4 cards per row */
   margin-top: 10px;
-  gap:40px;
+  gap:45px;
 }
 
 
@@ -31,7 +31,7 @@
   width: 100%;
   height: 140px; /* Reduce image height here */
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 /* ROOM NAME */

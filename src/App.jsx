@@ -25,7 +25,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-logo">
            <img src="image/Swastik.logo.png" alt="Royal Swastik Logo" className="logo-img" />
-              <span>Royal Swastik</span>
+              <span className="logo-name">Royal Swastik</span>
                </div>
         <div className="nav-links">
           <NavLink to="/" className="nav-link"><FontAwesomeIcon icon={faHouse} />Home</NavLink>

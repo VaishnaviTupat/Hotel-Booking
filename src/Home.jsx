@@ -1,54 +1,135 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+
+    const navigate = useNavigate();
+
+  const hotels = [
+    { name: "Hyderabad", price: "₹3500", img: "/image/Hotel6.jpg"},
+    { name: "Mumbai", price: "₹3200", img: "/image/Hotel5.jpg" },
+    { name: "Chennai", price: "₹3000", img: "/image/hotel3.jpg"},
+    { name: "Surat", price: "₹3200", img: "/image/Hotel4.jpg"}
+  ];
+const rooms = [
+    { name: "Single Bed Non-AC Room", price: 1200 },
+    { name: "Single Bed AC Room", price: 2000 },
+    { name: "Double Bed Non-AC Room", price: 2200 },
+    { name: "Double Bed AC Room", price: 3000 },
+    { name: "Deluxe Room", price: 3500 },
+    { name: "Family Room", price: 5000 },
+    { name: "Executive Room", price: 5500 },
+    { name: "Luxury Room", price: 4500 },
+    { name: "Suite Room", price: 6000 },
+    { name: "Presidential Suite", price: 10000 },
+    { name: "Penthouse Room", price: 8000 },
+    { name: "Accessible Room", price: 2500 }
+  ];
+const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
-    <div className="home-page">
+    <div className="home">
 
-      {/* Hero Section */}
-      <div className="hero-section">
-        <div className="hero-overlay">
-          <h1>Welcome to Royal Swastik</h1>
-          <p>Experience Luxury, Comfort & Elegance</p>
-          <NavLink to="/booking" className="hero-btn">Book Now</NavLink>
-        </div>
-      </div>
+      {/* HERO */}
+      <section className="hero">
 
-      {/* Features Section */}
-      <div className="features-section">
-        <div className="feature-card">
-          <h3>Luxury Rooms</h3>
-          <p>Spacious and elegantly designed rooms for your comfort.</p>
+        <div className="hero-left">
+          <h1>Explore the World</h1>
+          <p>Find and book amazing hotels easily</p>
         </div>
 
-        <div className="feature-card">
-          <h3>Exclusive Offers</h3>
-          <p>Special discounts and packages for every guest.</p>
+        <div className="hero-right">
+          <img src="public/image/bi1.jpg" alt="travel" />
         </div>
 
-        <div className="feature-card">
-          <h3>24/7 customer Support</h3>
-          <p>Our team is available anytime to make your stay perfect.</p>
+        {/* FLOATING SEARCH CARD */}
+        <div className="search-card">
+          <div className="field">
+            <label>Location</label>
+            <input type="text" placeholder="City" />
+          </div>
+
+           <div className="field">
+            <label>Room</label>
+           <select name="roomType" className="field-room" required onChange={handleChange}>
+             <option value="">Room Type</option>
+                {rooms.map((room, index) => (
+                   <option key={index} value={room.name}>
+                {room.name}
+              </option>
+            ))}
+        </select>
+          </div>
+
+          <div className="field">
+            <label>Check In</label>
+            <input type="date" />
+          </div>
+
+          <div className="field">
+            <label>Check Out</label>
+            <input type="date" />
+          </div>
+
+     <button className="search-btn" onClick={() => navigate("/room")}>
+      Search
+    </button>
         </div>
 
-      <div className="feature-card">
-          <h3>Hygiencic & Safe stay </h3>
-          <p>Experience a stay where Hygiene meets comfort.</p>
-        </div>
+      </section>
 
-        <div className="feature-card">
-          <h3>Prime Location</h3>
-          <p>we have Prime location so can stay the location you want as per your preffernce.</p>
-        </div>
-      
-</div>
+      {/* FEATURED */}
+      <section className="featured">
+        <h2>Popular Locations</h2>
 
-      {/* Booking CTA Section */}
-      <div className="booking-cta">
-        <h2>Ready for a memorable stay?</h2>
-        <NavLink to="/booking" className="hero-btn">Book Your Room</NavLink>
-      </div>
+        <div className="hotel-grid">
+          {hotels.map((hotel, index) => (
+            <div className="hotel-card" key={index}>
+              <img src={hotel.img} alt="" />
+              <div className="hotel-info">
+                <h3>{hotel.name}</h3>
+                <p>{hotel.price} / night</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+{/* FEATURES */}
+<section className="features">
+
+  <h2>Why Choose Royal Swastik?</h2>
+
+  <div className="features-grid">
+
+    <div className="feature-card1">
+      <h3>🏨 Luxury Rooms</h3>
+      <p>Experience premium comfort with modern amenities.</p>
+    </div>
+
+    <div className="feature-card2">
+      <h3>💰 Best Price</h3>
+      <p>Get the best deals at affordable prices.</p>
+    </div>
+
+    <div className="feature-card3">
+      <h3>📍 Prime Locations</h3>
+      <p>Stay at top destinations across cities.</p>
+    </div>
+
+    <div className="feature-card4">
+      <h3>🕒 24/7 Support</h3>
+      <p>We are always here to help you anytime.</p>
+    </div>
+
+  </div>
+
+</section>
 
     </div>
   );

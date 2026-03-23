@@ -3,38 +3,46 @@
   position: fixed;
   top: 0;
   width: 98%;
-  border-radius: 20px;
-  height: 64px;                 /* Navbar height */
-  padding: 0 10px;              /* Left–right spacing */
+  border-radius: 40px;
+  height: 64px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
-  background: #1c1c1c;          /* Dark background */
+  justify-content: space-between; /* ⭐ CHANGE THIS */
+  background: #fffdfd;
   box-shadow: 0 4px 15px rgba(0,0,0,0.6);
   z-index: 1000;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  gap: 70px; /* increase this value */
 }
 
 /*  LOGO SECTION */ 
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 5px;                    /* Space between logo image & text */
-  color: #f5c542;               /* Gold brand color */
+  gap: 2px;                    /* Space between logo image & text */
+  color: #2e0247;               /* Gold brand color */
   font-size: 18px;
   font-weight: 700;
 }
 
 /* Logo image size */
 .logo-img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 /* LINKS CONTAINER */
 .nav-link {
   font-size: 14px;
+  gap: 10px;
   padding: 8px 10px;
-  color: white !important;      /* force white text */
-  margin-left: 5px;
+  color: rgb(21, 22, 22) !important;      /* force white text */
+  margin-left: auto;
 }
 .navbar .nav-link {
   color: #ffffff;
@@ -43,13 +51,13 @@
 .nav-link {
   color: #140c0c;          /* default text color */
   text-decoration: none;  /* remove underline */
-  padding: 10px 14px;      /*hover yellow box size*/
+  padding: 10px 12px;      /*hover yellow box size*/
   border-radius: 8px;
 }
 
 .nav-link:hover {
-  background: #f5c542;    /* gold background */
-  color: white; /* 🔒 force black text */
+  background: #b75aea;    /* gold background */
+  color: white !important; /* 🔒 force black text */
   text-decoration: none;
 }
 
@@ -67,6 +75,6 @@
 
 /* Active navbar link (current page) */
 .nav-link.active {
-  background: #f5c542;   /* same gold color as hover */
-  color: white;
+  background:#b75aea;   /* same gold color as hover */
+  color: white !important;
 }
