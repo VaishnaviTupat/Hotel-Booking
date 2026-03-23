@@ -32,7 +32,9 @@ function Offer() {
 ];
   return (
     <div className="offers-page">
-      <h2 className="offers-title"><FontAwesomeIcon icon={faGift }/>Exclusive Hotel Offers<FontAwesomeIcon icon={faGift }/></h2>
+      <h2 className="offers-title">
+        🎁 Exclusive Hotel 🎁
+          </h2>
 
       <div className="offers-container">
         {offers.map((offer) => (

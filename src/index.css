@@ -61,6 +61,8 @@
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+
 /* Light mode */
 @media (prefers-color-scheme: light) {
   .app-root {

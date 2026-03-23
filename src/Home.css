@@ -4,25 +4,45 @@ body {
   background: #f4f7fb;
 }
 
-/* HERO */
+/* HERO BACKGROUND */
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 240px;
-  padding: 100px 80px;
-  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
   position: relative;
+  height: 500px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  /* 🔥 BACKGROUND IMAGE */
+  background: url("/image/bi4.jpg") center/cover no-repeat;
 }
 
-/* LEFT */
+/* DARK OVERLAY */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.3)
+  );
+}
+
+/* TEXT ON TOP */
+.hero-left {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+}
+
 .hero-left h1 {
-  font-size: 48px;
+  font-size: 42px;
 }
 
 .hero-left p {
   margin-top: 10px;
-  color: #555;
+  opacity: 0.9;
 }
 
 /* RIGHT IMAGE */
@@ -34,7 +54,7 @@ body {
 /* SEARCH CARD */
 .search-card {
   position: absolute;
-  bottom: -40px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -69,7 +89,6 @@ body {
   font-size: 14px;
 }
 
-
 /* BUTTON */
 .search-btn {
   background: #4083ee !important;
@@ -77,18 +96,39 @@ body {
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
- 
 }
 
-/* FEATURED */
+/* SECTION */
 .featured {
-  padding: 100px 80px 40px;
+  padding: 20px 10px;
+  background: linear-gradient(135deg, #f0f4ff, #f9fbff);
 }
 
+/* TITLE */
+.featured h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative;
+}
+
+/* UNDERLINE EFFECT */
+.featured h2::after {
+  content: "";
+  width: 290px;
+  height: 4px;
+  background: #4f7cff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* GRID */
 .hotel-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
 /* CARD */
@@ -96,26 +136,83 @@ body {
   background: white;
   border-radius: 20px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.4s;
+  cursor: pointer;
+  position: relative;
 }
 
+/* IMAGE */
 .hotel-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: 0.4s;
 }
 
-.hotel-card:hover {
-  transform: translateY(-5px);
+/* HOVER ZOOM */
+.hotel-card:hover img {
+  transform: scale(1.1);
 }
 
+/* INFO BOX */
 .hotel-info {
-  padding: 15px;
+  padding: 18px;
+}
+
+/* NAME */
+.hotel-info h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* PRICE */
+.hotel-info p {
+  color: #2d56eb;
+  font-weight: 600;
+}
+
+/* CARD HOVER EFFECT */
+.hotel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* OPTIONAL: GLASS TAG (LOCATION BADGE) */
+.hotel-card::before {
+  content: "Popular";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 /* FEATURES SECTION */
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 80px;   /* 🔥 increase this */
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+  /* UNDERLINE EFFECT */
+.section-title:after{
+  content: "";
+  width: 240px;
+  height: 4px;
+  background: #4f7cff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+
 .features {
-  padding: 60px 80px;
+  padding: 20px 40px;
   background: #f8fafc;
 }
 
@@ -177,4 +274,58 @@ body {
 
 .feature-card p {
   color: #555;
+}
+
+/* ROOM SCROLL LIKE CATEGORY */
+.room-wrapper {
+  margin-top: 10px;
+}
+
+.room-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.room-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ITEM */
+.room-item {
+  min-width: 110px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* PERFECT CIRCLE */
+.room-item img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f8f7f6;
+  transition: 0.3s;
+}
+
+.room-item img:hover {
+  transform: scale(1.1);
+  border-color: rgb(165, 164, 162);
+}
+
+.room-item p {
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ANIMATION */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

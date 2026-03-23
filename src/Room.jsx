@@ -23,7 +23,7 @@ function Room() {
     { id: 12, name: "Accessible Room", price: 2500, img: "image/accessible.jpg", description: "Wheelchair Friendly, AC, Free WiFi, TV, Safety Rails" }
   ];
 
-  const itemsPerPage = 4;
+  const itemsPerPage = 8;
   const totalPages = Math.ceil(rooms.length / itemsPerPage);
 
   const indexOfLastRoom = currentPage * itemsPerPage;

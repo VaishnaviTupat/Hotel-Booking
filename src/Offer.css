@@ -44,7 +44,7 @@
   position: absolute;
   top: -10px;
   right: -10px;
-  background: #240202;
+  background: #eb1fae;
   color: white;
   padding: 8px 12px;
   border-radius: 20px;
@@ -91,8 +91,8 @@
   padding: 10px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(135deg, #f5c542, #d4af37); /* Premium gold */
-  color: #000;              /* black text */
+  background: linear-gradient(135deg, #04f65d, #12dc1f); /* Premium gold */
+  color: white;              /* black text */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -100,7 +100,7 @@
 
 /* Hover effect */
 .offer-btn:hover {
-  background: linear-gradient(135deg, #ffd700, #c9a227);
+  background: linear-gradient(135deg, #04f65d, #12dc1f);
   transform: translateY(-2px);
 }
 
