@@ -34,7 +34,7 @@
   position: absolute;
   top: 45px;
   right: 0;
-  background: black;
+  background: #008c8c !important;
   border-radius: 8px;
   width: 150px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
@@ -54,6 +54,6 @@
 }
 
 .account-dropdown button:hover {
-  background: #f5c542;
+  background:  #046969 !important;
   color: #fcf9f9;
 }

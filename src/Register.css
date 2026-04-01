@@ -1,62 +1,110 @@
+/* PAGE BACKGROUND */
 .register-page {
-  min-height: 60vh;
+  height: 130vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
 }
 
-.register-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  width: 350px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+/* MAIN CONTAINER */
+.register-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 85%;
+  max-width: 1100px;
+  margin-top: 10px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* LEFT SIDE (GOLD) */
+.register-left {
+  background: linear-gradient(135deg, #008c8c,#07abab);
+  color: #f8f4f4;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-left h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.register-left p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* RIGHT SIDE (FORM) */
+.register-right {
+  background: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-right h2 {
+  margin-bottom: 25px;
   text-align: center;
 }
 
-.register-card h2 {
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.register-card form {
+/* FORM */
+.register-right form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-.register-card input {
-  padding: 12px;
-  margin-bottom: 15px;
+/* INPUT */
+.register-right input,select {
+  padding: 12px 15px;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  border-radius: 6px;
   font-size: 14px;
+  transition: 0.3s;
 }
 
-.register-card input:focus {
+.register-right input:focus {
+  border-color: #e74c09;
   outline: none;
-  border-color: #f5c542;
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
-.register-card button {
+/* BUTTON */
+.register-right button {
   padding: 12px;
-  background: #f5c542;
   border: none;
-  border-radius: 25px;
-  font-weight: 600;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #008c8c, #08afaf);
+  color: #f7f4f4;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-.register-card button:hover {
-  background: #d4a017;
+.register-right button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.register-card p {
+/* LOGIN TEXT */
+.login-text {
   margin-top: 15px;
-  font-size: 12px;
+  text-align: center;
 }
 
-.register-card span {
-  color: #f5c542;
+.login-text span {
+  color: red;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.login-text span:hover {
+  text-decoration: underline;
 }

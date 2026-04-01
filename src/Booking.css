@@ -1,22 +1,14 @@
 .booking-container{
   display:flex;
   justify-content:center;
-  gap:90px;
+  gap:30px;
   border-radius: 10px;
-  padding:70px;
+  padding:40px;
 }
 
 /* BOTH CARDS SAME SIZE */
 
 .booking-card{
-  width:420px;
-  background:white;
-  padding:20px;
-  height: 430px;
-  border-radius:12px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.15);
-}
-.payment-card{
   width:400px;
   background:white;
   padding:20px;
@@ -24,8 +16,16 @@
   border-radius:12px;
   box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
+.payment-card{
+  width:450px;
+  background:white;
+  padding:20px;
+  height: 520px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
 .payment-card p{
-  margin: 4px 0;
+  margin: 10px 0;
 }
 
 /* TITLES */
@@ -72,13 +72,11 @@
 }
 
 /* PAYMENT DETAILS */
-
 .payment-info p{
-  margin: 0;
+  margin: 14px 0;
 }
 
 /* COUPON */
-
 .coupon-box{
   display:flex;
   gap:10px;
@@ -94,7 +92,7 @@
 
 .coupon-box button{
   padding:8px 15px;
-  background:rgb(50, 194, 6);
+  background:rgb(193, 63, 236);
   color:rgb(250, 247, 247);
   border:none;
   border-radius:6px;
@@ -102,7 +100,6 @@
 }
 
 /* AMOUNT */
-
 .discount{
   color:rgb(13, 12, 12);
   margin:8px 0;
@@ -116,7 +113,7 @@
 
 /* PAYMENT METHOD */
 .payment{
-   gap:30px;
+   gap:20px;
 }
 
 /*Discount*/
@@ -132,10 +129,11 @@
 .email-toggle-row{
 display:flex;
 align-items:center;
-gap:100px;
+gap:90px;
 }
 
 .email-toggle-row p{
+font-size: 16px;
 margin:0;
 }
 
@@ -157,7 +155,8 @@ color:#0056b3;
 
 .email-input input{
 width:90%;
-padding:8px;
+padding:10px;
+margin-top: 10px;
 border:1px solid #ccc;
 border-radius:6px;
 }
@@ -169,19 +168,36 @@ gap:6px;
 margin-top:10px;
 }
 
-.payment-btn{
+.payment-btn1{
 width:100%;
-padding:7px;
-border:1px solid #3b82f6 !important;
-background:white;
-color:#3b82f6;
+padding:12px;
+border:1px solid #fbfcfd;
+background:rgb(119, 233, 84) !important;
+color:#f6f7f9;
 border-radius:6px;
-font-size:12px;
+font-size:16px;
 cursor:pointer;
 transition:0.3s;
 }
-
-.payment-btn:hover{
-background:#3b82f6;
-color:white;
+.payment-btn2{
+width:100%;
+padding:12px;
+border:1px solid #fbfcfd ;
+background:rgb(237, 116, 192) !important;
+color:#f6f7f9;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+.payment-btn3{
+width:100%;
+padding:12px;
+border:1px solid #fbfcfd;
+background:rgb(100, 148, 230) !important;
+color:#f6f7f9;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
 }

@@ -1,37 +1,75 @@
+/* PAGE */
 .amenities-page {
-  padding: 10px 8%;
-  background: #f8f9fa;
-  min-height: 100vh;
-}
-
-.amenities-title {
+  padding: 60px 20px;
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #222;
+  background: #f5f7fb;
 }
 
+/* TITLE */
+.amenities-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.amenities-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* GRID */
 .amenities-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* CARD */
 .amenity-card {
-  background: #ffffff;
-  padding: 30px 20px;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
+  position: relative;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+/* IMAGE */
+.amenity-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* DARK OVERLAY */
+.amenity-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  text-align: left;
+}
+
+/* ICON */
+.amenity-overlay span {
+  font-size: 28px;
+}
+
+/* TEXT */
+.amenity-overlay h3 {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+/* HOVER EFFECT 🔥 */
+.amenity-card:hover img {
+  transform: scale(1.1);
 }
 
 .amenity-card:hover {
   transform: translateY(-8px);
-}
-
-.amenity-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-  display: block;
 }

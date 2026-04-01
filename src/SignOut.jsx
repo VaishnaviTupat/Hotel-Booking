@@ -6,13 +6,16 @@ function SignOut() {
 
   const navigate = useNavigate();
 
+  // ✅ Get current user dynamically
+  const user = JSON.parse(localStorage.getItem("currentUser"));
+
   const handleSignOut = () => {
-    // clear user data
-    localStorage.removeItem("user");
+    // ✅ remove correct key
+    localStorage.removeItem("currentUser");
 
     alert("You have been signed out successfully!");
 
-    navigate("/signin"); // redirect to login page
+    navigate("/signin"); // redirect to signin
   };
 
   return (
@@ -23,13 +26,13 @@ function SignOut() {
         <h2>Sign Out</h2>
         <p>Are you sure you want to sign out from your account?</p>
 
-        <button className="signout-btn" onClick={handleSignOut} >
+        <button className="signout-btn" onClick={handleSignOut}>
           Sign Out
         </button>
 
         <button
           className="cancel-btn"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/home")}
         >
           Cancel
         </button>
@@ -41,17 +44,17 @@ function SignOut() {
 
         <div className="summary-item">
           <span>User:</span>
-          <span>Vaishnavi</span>
+          <span>{user?.name || "Guest"}</span>
         </div>
 
         <div className="summary-item">
           <span>Status:</span>
-          <span>Logged In</span>
+          <span>{user ? "Logged In" : "Logged Out"}</span>
         </div>
 
         <div className="summary-item">
           <span>Last Action:</span>
-          <span>Room Booking</span>
+          <span>{user?.lastAction || "N/A"}</span>
         </div>
 
         <div className="summary-item">

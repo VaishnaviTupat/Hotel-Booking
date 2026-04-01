@@ -5,79 +5,96 @@ function AboutUs() {
   return (
     <div className="about-page">
 
-      {/* Hero Section */}
-      <div className="about-hero">
-        <div className="hero-overlay">
-          <h1>Welcome to Royal Swastik</h1>
-          <p>Experience Luxury, Comfort & Elegance</p>
+      {/* HERO */}
+      <section className="about-hero">
+        <div className="hero-content">
+          <h1>Royal Swastik</h1>
+          <p>Luxury stays. Comfortable experience. Unforgettable memories ✨</p>
         </div>
-      </div>
+      </section>
 
-      {/* About Content */}
-      <div className="about-content">
-        <h2>Our Story</h2>
-        <p>
-          Royal Swastik was created with a passion for hospitality and excellence.
-          We provide a perfect blend of luxury, comfort, and world-class service.
-          Our goal is to make every guest feel special and at home.
-        </p>
-      </div>
+      {/* ABOUT SECTION */}
+      <section className="about-content">
 
-      {/* Stats Section */}
-      <div className="about-stats">
-        <div className="stat-card">
-          <h3>10+</h3>
-          <p>Years of Experience</p>
+        <div className="about-image">
+          <img src="/image/bi2.jpg" alt="hotel" />
         </div>
-        <div className="stat-card">
-          <h3>5000+</h3>
-          <p>Happy Guests</p>
-        </div>
-        <div className="stat-card">
-          <h3>50+</h3>
-          <p>Luxury Rooms</p>
-        </div>
-        <div className="stat-card">
-          <h3>24/7</h3>
-          <p>Customer Support</p>
-        </div>
-      </div>
 
-      {/* Why Choose Us */}
-      <div className="why-section">
+        <div className="about-text">
+          <h2>About Us</h2>
+          <p>
+            Royal Swastik is your trusted hotel booking platform where comfort
+            meets luxury. We provide a seamless booking experience with a wide
+            range of rooms across top destinations.
+          </p>
+
+          <p>
+            Whether you're traveling for business or leisure, we ensure a
+            premium stay with affordable pricing and world-class service.
+          </p>
+
+          <button className="about-btn">Explore Rooms</button>
+        </div>
+
+      </section>
+
+      {/* FEATURES */}
+      <section className="about-features">
+
         <h2>Why Choose Us?</h2>
 
-        <div className="why-cards">
-          <div className="why-card">
+        <div className="feature-grid">
+
+          <div className="feature-box glass">
+            <span>🏨</span>
             <h3>Luxury Rooms</h3>
-            <p>Modern interiors with premium comfort and style.</p>
+            <p>Modern, elegant, and comfortable stays.</p>
           </div>
 
-          <div className="why-card">
-            <h3>Prime Location</h3>
-            <p>Located in the heart of the city for easy access.</p>
+          <div className="feature-box glass">
+            <span>💰</span>
+            <h3>Best Deals</h3>
+            <p>Affordable prices with top quality service.</p>
           </div>
 
-          <div className="why-card">
-            <h3>Affordable Prices</h3>
-            <p>Best quality stay at competitive pricing.</p>
+          <div className="feature-box glass">
+            <span>📍</span>
+            <h3>Prime Locations</h3>
+            <p>Stay in the heart of every city.</p>
           </div>
 
-          <div className="why-card">
-            <h3>Excellent Service</h3>
-            <p>Friendly staff dedicated to your comfort.</p>
+          <div className="feature-box glass">
+            <span>🕒</span>
+            <h3>24/7 Support</h3>
+            <p>Always here to help you anytime.</p>
           </div>
 
-           <div className="why-card">
-          <h3>Hygiencic & Safe stay </h3>
-          <p>Experience a stay where Hygiene meets comfort.</p>
         </div>
+
+      </section>
+
+      {/* STATS */}
+      <section className="about-stats">
+
+        <div className="stat-card">
+          <h2>500+</h2>
+          <p>Happy Customers</p>
         </div>
-      </div>
+
+        <div className="stat-card">
+          <h2>50+</h2>
+          <p>Hotels</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>1000+</h2>
+          <p>Bookings</p>
+        </div>
+
+      </section>
 
     </div>
   );
 }
 
 export default AboutUs;
-

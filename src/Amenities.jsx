@@ -2,36 +2,43 @@ import React from "react";
 import "./Amenities.css";
 
 function Amenities() {
+
+  const amenities = [
+    { name: "Restaurant", icon: "🍽️", img: "/image/rest.jpg" },
+    { name: "Spa & Wellness", icon: "💆‍♀️", img: "/image/spa.jpg" },
+    { name: "Swimming Pool", icon: "🏊‍♂️", img: "/image/swim.jpg" },
+    { name: "Free Wi-Fi", icon: "📶", img: "/image/wifi.jpg" },
+    { name: "Free Parking", icon: "🚗", img: "/image/park.jpg" },
+    { name: "Fitness Center", icon: "🏋️", img: "/image/gym.jpg" },
+    { name: "Room Service", icon: "🛎️", img: "/image/serv.jpg" },
+    { name: "Housekeeping", icon: "🧹", img: "/image/clean.jpg" }
+  ];
+
   return (
     <div className="amenities-page">
-      <h2 className="amenities-title">Our Amenities</h2>
+
+      <h2 className="amenities-title">✨ Our Amenities</h2>
+      <p className="amenities-subtitle">
+        Enjoy world-class facilities during your stay
+      </p>
 
       <div className="amenities-container">
-        <div className="amenity-card">
-          🍽️<h3>Restaurant</h3>
+        {amenities.map((item, index) => (
+          <div className="amenity-card" key={index}>
+
+            {/* IMAGE */}
+            <img src={item.img} alt={item.name} />
+
+            {/* OVERLAY CONTENT */}
+            <div className="amenity-overlay">
+              <span>{item.icon}</span>
+              <h3>{item.name}</h3>
+            </div>
+
           </div>
-        <div className="amenity-card">
-          💆‍♀️<h3>Spa & Wellness</h3>
-          </div>
-        <div className="amenity-card">
-          🏊‍♂️<h3>Swimming Pool</h3>
-          </div>
-        <div className="amenity-card">
-          📶<h3>Free Wi-Fi</h3>
-          </div>
-        <div className="amenity-card">
-          🚗<h3>Free Parking</h3>
-          </div>
-        <div className="amenity-card">
-          🏋️<h3>Fitness Center</h3>
-          </div>
-        <div className="amenity-card">
-          🛎️<h3>24/7 Room Service</h3>
-          </div>
-        <div className="amenity-card">
-          🧹<h3>Daily Housekeeping</h3>
-          </div>
+        ))}
       </div>
+
     </div>
   );
 }

@@ -37,89 +37,89 @@ function Room() {
   return (
     <div className="room-layout">
 
-      {/* LEFT SECTION */}
-      <div className="room-main">
+      {/* ROOM GRID */}
+      <div className="room-grid">
+        {(selectedRoom ? [selectedRoom] : currentRooms).map((room) => (
+          <div key={room.id} className="room-card">
 
-        {/* ROOM GRID */}
-        <div className="room-grid">
-          {(selectedRoom ? [selectedRoom] : currentRooms).map((room) => (
-            <div key={room.id} className="room-card">
+            <img src={room.img} alt={room.name} />
 
-              <img src={room.img} alt={room.name} />
+            <h3>{room.name}</h3>
 
-              <h3>{room.name}</h3>
-
-              <p className="price">₹{room.price} / night</p>
-
-              <button
-                className="details-btn"
-                onClick={() => toggleDetails(room.id)}
-              >
-                {openDetailsId === room.id ? "Hide Details" : "View Details"}
-              </button>
-
-              {openDetailsId === room.id && (
-                <div className="room-details">
-                  <p>{room.description}</p>
-                </div>
-              )}
-
-              <button
-                className="book-btn"
-                onClick={() => setSelectedRoom(room)}
-              >
-                Book Now
-              </button>
-
-            </div>
-          ))}
-        </div>
-
-        {/* PAGINATION BELOW GRID */}
-        {!selectedRoom && (
-          <div className="pagination">
+            <p className="price">₹{room.price} / night</p>
 
             <button
-              disabled={currentPage === 1}
-              onClick={() => setCurrentPage(currentPage - 1)}
+              className="details-btn"
+              onClick={() => toggleDetails(room.id)}
             >
-              Prev
+              {openDetailsId === room.id ? "Hide Details" : "View Details"}
             </button>
 
-            {Array.from({ length: totalPages }, (_, index) => (
-              <button
-                key={index}
-                className={currentPage === index + 1 ? "active" : ""}
-                onClick={() => setCurrentPage(index + 1)}
-              >
-                {index + 1}
-              </button>
-            ))}
+            {openDetailsId === room.id && (
+              <div className="room-details">
+                <p>{room.description}</p>
+              </div>
+            )}
 
             <button
-              disabled={currentPage === totalPages}
-              onClick={() => setCurrentPage(currentPage + 1)}
+              className="book-btn"
+              onClick={() => setSelectedRoom(room)}
             >
-              Next
+              Book Now
             </button>
 
           </div>
-        )}
-
+        ))}
       </div>
 
-      {/* BOOKING PANEL */}
-      {selectedRoom && (
-        <div className="booking-side">
+      {/* PAGINATION */}
+      {!selectedRoom && (
+        <div className="pagination">
+          <button
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage(currentPage - 1)}
+          >
+            Prev
+          </button>
 
-          <div className="booking-header">
-            <h3>{selectedRoom.name}</h3>
-            <span onClick={() => setSelectedRoom(null)}>✕</span>
-          </div>
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              className={currentPage === index + 1 ? "active" : ""}
+              onClick={() => setCurrentPage(index + 1)}
+            >
+              {index + 1}
+            </button>
+          ))}
 
-          <Booking room={selectedRoom} />
-
+          <button
+            disabled={currentPage === totalPages}
+            onClick={() => setCurrentPage(currentPage + 1)}
+          >
+            Next
+          </button>
         </div>
+      )}
+
+      {/* BOOKING PANEL (SLIDE-IN) */}
+      {selectedRoom && (
+        <>
+          <div 
+            className="booking-overlay"
+            onClick={() => setSelectedRoom(null)}
+          ></div>
+
+          <div className="booking-side">
+            <div className="booking-header">
+              <h3 className="room-heading">
+                🔥{selectedRoom.name} 
+              </h3>
+              <span onClick={() => setSelectedRoom(null)}>✕</span>
+            </div>
+
+            <Booking room={selectedRoom} />
+          </div>
+        </>
       )}
 
     </div>

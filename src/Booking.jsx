@@ -92,6 +92,7 @@ function Booking() {
      <form onSubmit={handleBooking}>
       <input type="text" name="name" placeholder="Full Name" required onChange={handleChange}/>
        <input type="email" name="email" placeholder="Email Address" required onChange={handleChange}/>
+        <input type="text" name="mobile" placeholder="Adhar Number" required onChange={handleChange}/>
        <input type="tel" name="mobile" placeholder="Mobile Number" required onChange={handleChange}/>
 
       <div className="date-row">
@@ -157,9 +158,9 @@ function Booking() {
       <div className="payment">
           <p>Select Payment Method</p>
             <div className="payment-options">
-              <button className="payment-btn">QR Code</button>
-              <button className="payment-btn">Credit Card</button>
-              <button className="payment-btn">On Cash</button>
+              <button className="payment-btn1">QR Code</button>
+              <button className="payment-btn2">Credit Card</button>
+              <button className="payment-btn3">On Cash</button>
             </div>
            </div>
 

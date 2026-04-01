@@ -1,140 +1,108 @@
-.body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;   /* optional – ensures no scroll anywhere */
-}
-
-/* Full screen – no scroll */
+/* PAGE */
 .signin-page {
-  height: 89vh;          /* exact screen height */
-  width: 98vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;       /* 🚫 disables scroll */
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  font-family: "Poppins", sans-serif;
+  background: #f5f5f5;
 }
 
-/* Card */
-.signin-card {
-  width: 300px;
-  background: #ffffff;
-  margin-top: 30px;
-  padding: 32px 30px;     /* controlled padding */
-  border-radius: 14px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+/* MAIN CARD */
+.signin-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  max-width: 1000px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Heading */
-.signin-card h2 {
-  text-align: center;
-  margin-top: 8px;
-  color: #222;
-  font-weight: 600;
-}
-
-/* Subtext */
-.signin-card .subtitle {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 14px;
-  color: #777;
-}
-
-/* Form */
-.signin-card form {
+/* LEFT SIDE */
+.signin-left {
+  background: linear-gradient(135deg, #008c8c,#07abab);
+  padding: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  color: white;
 }
 
-/* Inputs */
-.signin-card input {
-  height: 45px;
+.signin-left h1 {
+  font-size: 38px;
   margin-bottom: 15px;
-  padding: 0 14px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  transition: 0.3s ease;
 }
 
-.signin-card input::placeholder {
-  color: #999;
-}
-
-.signin-card input:focus {
-  outline: none;
-  border-color: #ff6b35;
-  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.15);
-}
-
-/* Button */
-.signin-card button {
-  height: 45px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 8px;
-  background: gold;
-  color: black;
+.signin-left p {
   font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s ease;
+  line-height: 1.6;
 }
 
-.signin-card button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(227, 179, 5, 0.35);
+/* RIGHT SIDE */
+.signin-right {
+  background: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Forgot Password */
-.forgot-password {
-  text-align: right;
-  margin: 8px 0 15px;
-  font-size: 13px;
-  color: #ff6b35;
-  cursor: pointer;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
-/* Bottom Text */
-.signin-card p {
-  margin-top: 18px;
+.signin-right h2 {
   text-align: center;
-  font-size: 14px;
-  color: #555;
+  margin-bottom: 25px;
 }
 
-.signin-card p span {
-  color: #ff6b35;
-  font-weight: 600;
+/* FORM */
+.signin-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUT */
+.signin-right input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.signin-right input:focus {
+  border-color: #d4af37;
+  outline: none;
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* BUTTON */
+.signin-right button {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background:  linear-gradient(135deg, #008c8c,#07abab);
+  color: #fbf8f8;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signin-right button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* REGISTER TEXT */
+.register-text {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.register-text span {
+  color: #f90606;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.signin-card p span:hover {
+.register-text span:hover {
   text-decoration: underline;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 420px) {
-  .signin-card {
-    width: 90%;
-    padding: 30px 20px;
-  }
 }

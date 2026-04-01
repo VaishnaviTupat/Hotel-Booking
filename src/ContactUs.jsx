@@ -25,74 +25,90 @@ function ContactUs() {
       return;
     }
 
-    setMessage("Thank you! Your message has been sent.");
+    setMessage("✨ Thank you! Your message has been sent.");
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
     <div className="contact-page">
 
-      {/* Hero Section */}
+      {/* HERO */}
       <div className="contact-hero">
         <div className="hero-overlay">
           <h1>Contact Royal Swastik</h1>
-          <p>We would love to hear from you</p>
+          <p>We’d love to hear from you 💬</p>
         </div>
       </div>
 
-      {/* Contact Info Cards */}
+      {/* INFO CARDS */}
       <div className="contact-info">
-        <div className="info-card">
-          <h3>Address</h3>
-          <p>New sai nagar, Hyderabad</p>
+        <div className="info-card1">
+          <h3>📍 Address</h3>
+          <p>New Sai Nagar, Hyderabad</p>
         </div>
-        <div className="info-card">
-          <h3>Phone</h3>
-          <p>+1 234 567 890</p>
+
+        <div className="info-card2">
+          <h3>📞 Phone</h3>
+          <p>+91 98765 43210</p>
         </div>
-        <div className="info-card">
-          <h3>Email</h3>
-          <p>info@royalSwastik.com</p>
+
+        <div className="info-card3">
+          <h3>📧 Email</h3>
+          <p>info@royalswastik.com</p>
         </div>
-         <div className="info-card">
-          <h3>Insta</h3>
-          <p>#royalSwastikhotel</p>
+
+        <div className="info-card4">
+          <h3>📸 Instagram</h3>
+          <p>@royalswastikhotel</p>
         </div>
-         <div className="info-card">
-          <h3>facebook</h3>
+
+        <div className="info-card5">
+          <h3>👍 Facebook</h3>
           <p>@royalswastik</p>
         </div>
       </div>
 
-      {/* Contact Form */}
+      {/* FORM */}
       <div className="contact-form-container">
         <h2>Send Us a Message</h2>
+
         <form className="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-          />
+          <div className="input-group">
+            <input
+              type="text"
+              name="name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <label>Full Name</label>
+          </div>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-          />
+          <div className="input-group">
+            <input
+              type="email"
+              name="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <label>Email Address</label>
+          </div>
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="6"
-            value={formData.message}
-            onChange={handleChange}
-          ></textarea>
+          <div className="input-group">
+            <textarea
+              name="message"
+              rows="5"
+              required
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+            <label>Your Message</label>
+          </div>
 
-          <button type="submit">Send Message</button>
+          <button type="submit" className="send-btn">
+            Send Message 🚀
+          </button>
         </form>
 
         {message && <p className="form-message">{message}</p>}

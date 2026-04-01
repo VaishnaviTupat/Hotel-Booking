@@ -1,142 +1,152 @@
-/* MAIN PAGE LAYOUT */
-.room-layout{
-  display:flex;
-  gap:30px;
+/* ===== MAIN LAYOUT ===== */
+.room-layout {
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-/* ROOM GRID (LEFT SIDE) */
-.room-grid{
-  flex:2;
-  display:grid;
-  grid-template-columns:repeat(4,1fr); /* 4 cards per row */
-  margin-top: 10px;
-  gap:45px;
+/* ===== GRID ===== */
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
 }
 
-
-/* ROOM CARD */
+/* ===== CARD ===== */
 .room-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background: white;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   text-align: center;
-
-  /* Reduce card height here */
-  min-height: 300px;
+  transition: 0.3s;
 }
 
-/* ROOM IMAGE */
+.room-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
 .room-card img {
   width: 100%;
-  height: 140px; /* Reduce image height here */
+  height: 150px;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 8px;
 }
 
-/* ROOM NAME */
+/* TEXT */
 .room-card h3 {
-  margin: 6px 0 4px;   /* top | left-right | bottom */
+  margin: 10px 0;
   font-size: 16px;
 }
 
-/* PRICE */
-.room-card .price {
-  margin: 2px 0 6px;
-  font-size: 14px;
-}
-
-/* VIEW DETAILS BUTTON */
-.room-card .details-btn {
-  margin-top: 4px;     /* reduce space above button */
-  padding: 8px 14px;   /* smaller button height */
-  background-color: rgb(255, 119, 0);
-}
-.room-card .details-btn:hover {
-  background-color: rgb(220, 109, 11);
-}
-
-/* DETAILS SECTION */
-.room-details {
-  margin-top: 8px;
-  font-size: 14px;
+.price {
   color: #555;
 }
 
-/* BOOK BUTTON */
+/* BUTTONS */
+.details-btn {
+  padding: 8px 12px;
+  background: orange !important;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
 .book-btn {
   margin-top: 10px;
-  padding: 8px;
-  width: 80%;
-  color: black; 
-   background:gold !important;             /* White text */
-   border: black;
+  padding: 10px;
+  width: 90%;
+  background:gold !important;
+  color:black;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 500;         /* Optional: makes text clearer */
 }
 
-/* BOOKING PANEL (RIGHT SIDE) */
-.booking-side{
-  flex:2;                 /* smaller panel */
-  background:white;
-  padding:10px;
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
-  position:sticky;
-  top:100px;
-  height:fit-content;
+/* ===== BOOKING SIDE PANEL ===== */
+.booking-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 880px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 25px rgba(0,0,0,0.2);
+  padding-top: 10px;
+  z-index: 1000;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease;
 }
 
-/* BOOKING HEADER */
+/* HEADER */
 .booking-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  justify-content: center; /* center content */
+   position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
 }
-
+/* CENTER HEADING */
+.room-heading {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
 .booking-header span {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
 }
-.room-grid{
-  height: 160px;
-  margin-top: 40px;
-}
-.room-main{
-  display:flex;
-  flex-direction:column;
-}
- /*=== Pagination ===*/
-.pagination{
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
-  gap:2px;
+.room-card h3 {
+  margin: 8px 0;
 }
 
-.pagination button{
-  padding:8px 15px;
-  margin:5px;
-  border:none;
-  gap: 2px;
-  border-radius:6px;
-  background:#eee;
-  cursor:pointer;
+.booking-header h3 {
+  margin: 5px 0;
 }
 
-.pagination button:hover{
-  background:#ff9800;
-  color:white;
+/* OVERLAY */
+.booking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
 }
 
-.pagination .active{
-  background:#ff9800;
-  color:white;
+/* ANIMATION */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.pagination button:disabled{
-  background:#ccc;
-  cursor:not-allowed;
+/* ===== PAGINATION ===== */
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: orange;
+  color: white;
 }
